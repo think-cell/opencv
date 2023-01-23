@@ -939,7 +939,7 @@ static void remapBicubic( const Mat& _src, Mat& _dst, const Mat& _xy,
                     for(int i = 0; i < 4; i++, w += 4 )
                     {
                         int yi = y[i];
-                        const T* S = S0 + static_cast<std::ptrdiff_t>(yi*sstep);
+                        const T* S = S0 + yi*static_cast<std::ptrdiff_t>(sstep);
                         if( yi < 0 )
                             continue;
                         if( x[0] >= 0 )
